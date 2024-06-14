@@ -1,0 +1,19 @@
+{
+  "name": "coldcard-pushtx",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "bitcoinjs-lib": "6.1.6",
+    "typescript": "5.4.5",
+    "vite": "5.2.13",
+    "vite-plugin-node-polyfills": "0.22.0",
+    "vite-plugin-singlefile": "2.0.1"
+  }
+}
