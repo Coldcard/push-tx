@@ -2,7 +2,7 @@
 
 ![](img/cc-pushtx.png)
 
-This feature allows single-tap broadcast of freshly-signed transactions.
+This feature allows single-tap broadcast of freshly-signed transactions from a [COLDCARD](https://coldcard.com).
 
 `PSBT ==[SD|QR|NFC]==> COLDCARD signed TXN ==[NFC tap]==> Phone Browser ==> TXN Broadcast by node`
 
@@ -29,6 +29,7 @@ Read the [full specification here](https://github.com/Coldcard/firmware/blob/mas
 We know of the following services that your Coldcard can use:
 
 - `coldcard.com/pushtx' 
+- `pushtx.org/pushtx' 
 - `mempool.space/pushtx'
 
 You can also host your own backend and there may be other services out there
