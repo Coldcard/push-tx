@@ -10,8 +10,8 @@ Once enabled with a URL, the COLDCARD will show the NFC animation
 after signing the transaction. When the user taps their phone, the
 phone will see an NFC tag with URL inside. That URL contains the
 signed transaction ready to go, and once opening in the mobile
-browser, that URL will load. The landing page will connect to a
-Bitcoin node and send the transaction on the public Bitcoin network.
+browser of the phone, that URL will load. The page will connect to
+a Bitcoin node and send the transaction on the public Bitcoin network.
 
 This feature is available on Q and Mk4 and requires NFC to be enabled.
 See `Advanced/Tools > NFC Push Tx` to enable.
@@ -28,26 +28,31 @@ Read the [full specification here](https://github.com/Coldcard/firmware/blob/mas
 
 We know of the following services that your Coldcard can use:
 
+- `mempool.space/pushtx'
 - `coldcard.com/pushtx' 
 - `pushtx.org/pushtx' 
-- `mempool.space/pushtx'
 
 You can also host your own backend and there may be other services out there
 we don't know about.
-
-A single-file (html and javascript) file is available
-at [coldcard.com/static/coldcard-pushtx.html](https://coldcard.com/static/coldcard-pushtx.html).
-You can host this file anywhere your phone can reach, and then use that URL in your
-COLDCARD settings. It uses your phone's browser to submit directly
-to `mempool.space` and `blockstream.info` sites (both at same time). It is equivalent
-to the page hosted at `https://coldcard.com/pushtx#`
 
 ## Roll Your Own
 
 This [github repo](https://github.com/Coldcard/push-tx) contains the source for
 the code hosted at `Coldcard.com/pushtx` for your review or to replace
-and personalize.
+and personalize. It also is the source for this website (*pushtx.org*).
 
+A single-file (html and javascript) file is available
+at [from pushtx.org](cc-implementation/build-single-file/index.html)
+or slightly more directly
+[from the github repo.](https://github.com/Coldcard/push-tx/blob/master/cc-implementation/build-single-file/index.html)
+You can host this file anywhere your phone can reach, and then use that URL in your
+COLDCARD settings. It uses your phone's browser to submit 
+to `mempool.space` and `blockstream.info` sites (both at same time). It is equivalent
+to the page hosted at `https://coldcard.com/pushtx#`
+
+It's not hard to write your own code to submit a signed transaction to your
+node directly using the RPC-JSON protocol. For maximum privacy, that would
+be best, since there is no need to involve outside services.
 
 ### Notes
 
