@@ -28,9 +28,9 @@ Read the [full specification here](https://github.com/Coldcard/firmware/blob/mas
 
 We know of the following services that your Coldcard can use:
 
-- `mempool.space/pushtx'
-- `coldcard.com/pushtx' 
-- `pushtx.org/pushtx' 
+- `mempool.space/pushtx`
+- `coldcard.com/pushtx`
+- `pushtx.org/pushtx`
 
 You can also host your own backend and there may be other services out there
 we don't know about.
