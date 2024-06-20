@@ -317,6 +317,8 @@ async function run() {
   detailsArea.innerHTML = '';
 
   if (!window.location.hash) {
+    const path = window.location.origin + window.location.pathname;
+
     const msg = `
       <p><strong>Did you get here by accident?</strong></p>
       <p>
@@ -324,7 +326,7 @@ async function run() {
         <strong>COLDCARD NFC Push TX feature</strong>. The complete URL should look something like this (but longer):
       </p>
 
-      <p><code>https://coldcard.com/pushtx#t=AgAAAAMNCxXtp2GVYVhkRXHLMmdZFs4p3kbFK ⋯ ABf&c=uiSVRda-1tw</code></p>
+      <p><code>${path}#t=AgAAAAMNCxXtp2GVYVhkRXHLMmdZFs4p3kbFK ⋯ ABf&c=uiSVRda-1tw</code></p>
     `;
 
     messageArea.innerHTML = renderMessage('info', msg);

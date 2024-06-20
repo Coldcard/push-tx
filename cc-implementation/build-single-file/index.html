@@ -100,15 +100,15 @@ PROCEED WITH CAUTION!
       ${r}
       <div>${t}</div>
     </div>
-  `}async function Us(){const e=document.querySelector(".pushtx-message-area"),t=document.querySelector(".pushtx-details-area");if(!e||!t)throw new Error("Need message and details areas in HTML.");if(e.innerHTML="",t.innerHTML="",!window.location.hash){const d=`
+  `}async function Us(){const e=document.querySelector(".pushtx-message-area"),t=document.querySelector(".pushtx-details-area");if(!e||!t)throw new Error("Need message and details areas in HTML.");if(e.innerHTML="",t.innerHTML="",!window.location.hash){const S=`
       <p><strong>Did you get here by accident?</strong></p>
       <p>
         This page is meant to be loaded together with transaction data using the
         <strong>COLDCARD NFC Push TX feature</strong>. The complete URL should look something like this (but longer):
       </p>
 
-      <p><code>https://coldcard.com/pushtx#t=AgAAAAMNCxXtp2GVYVhkRXHLMmdZFs4p3kbFK ⋯ ABf&c=uiSVRda-1tw</code></p>
-    `;e.innerHTML=Kt("info",d);return}e.innerHTML=Kt("progress","Sending transaction, please wait...");const[r,n]=await dr(vh(window.location.hash));if(r){e.innerHTML=Kt("error",r.message);return}const{tx:i,network:c}=n,s=i.getId(),[a,p]=await dr(Ph(i,c)),[w,f]=await dr(Bh(s,c));if(p||f){const d=f!=null&&f.status.confirmed?"This transaction has already been confirmed.":"The transaction has been sent and is waiting to be confirmed.",S=Ah[c].map(([y,_])=>`<li><a href="${_}${s}" target="_blank" rel="noopener">${y}</a></li>`).join("");e.innerHTML=Kt("success",`<p>${d} Transaction ID:</p>
+      <p><code>${window.location.origin+window.location.pathname}#t=AgAAAAMNCxXtp2GVYVhkRXHLMmdZFs4p3kbFK ⋯ ABf&c=uiSVRda-1tw</code></p>
+    `;e.innerHTML=Kt("info",S);return}e.innerHTML=Kt("progress","Sending transaction, please wait...");const[r,n]=await dr(vh(window.location.hash));if(r){e.innerHTML=Kt("error",r.message);return}const{tx:i,network:c}=n,s=i.getId(),[a,p]=await dr(Ph(i,c)),[w,f]=await dr(Bh(s,c));if(p||f){const d=f!=null&&f.status.confirmed?"This transaction has already been confirmed.":"The transaction has been sent and is waiting to be confirmed.",S=Ah[c].map(([y,_])=>`<li><a href="${_}${s}" target="_blank" rel="noopener">${y}</a></li>`).join("");e.innerHTML=Kt("success",`<p>${d} Transaction ID:</p>
     
         <p class="txid">${s}</p>
     
