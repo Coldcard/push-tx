@@ -14,7 +14,7 @@ browser of the phone, that URL will load. The page will connect to
 a Bitcoin node and send the transaction on the public Bitcoin network.
 
 This feature is available on Q and Mk4 and requires NFC to be enabled.
-See `Advanced/Tools > NFC Push Tx` to enable.
+See `Settings > NFC Push Tx` to enable.
 
 ## URL Protocol Spec
 
