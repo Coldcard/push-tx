@@ -1,8 +1,8 @@
-# NFC Push TX -- Coldcard Feature _(new)_
+# NFC Push TX
 
 ![](img/cc-pushtx.png)
 
-This feature allows single-tap broadcast of freshly-signed transactions from a [COLDCARD](https://coldcard.com).
+This feature allows single-tap broadcast of freshly-signed transactions from a [COLDCARD](https://coldcard.com) and hopefully others soon(tm) 
 
 `PSBT ==[SD|QR|NFC]==> COLDCARD signed TXN ==[NFC tap]==> Phone Browser ==> TXN Broadcast by node`
 
