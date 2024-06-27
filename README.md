@@ -1,6 +1,6 @@
 # NFC Push TX
 
-![](img/cc-pushtx.png)
+[![Open video on YouTube](img/cc-pushtx.png)](https://www.youtube.com/watch?v=Tte7nddBUCI)
 
 This feature allows single-tap broadcast of freshly-signed transactions from a [COLDCARD](https://coldcard.com) and hopefully others soon(tm) 
 
